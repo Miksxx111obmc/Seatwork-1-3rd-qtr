@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Currency Converter</title>
+<style>
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  text-align: center;
+}
+
+
+.container {
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #fff;
+}
+
+
+h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Label */
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  color: #333;
+  font-weight: bold;
+  box-shadow: inset 4px 4px 8px rgba(255, 255, 255, 0.6),
+              inset -4px -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:nth-child(3) { background: #ff4757; } 
+button:nth-child(4) { background: #ffa502; } 
+button:nth-child(5) { background: #2ed573; } 
+button:nth-child(6) { background: #3742fa; } 
+button:nth-child(7) { background: #9b59b6; } 
+
+
+button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.result {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  box-shadow: inset 4px 4px 8px rgba(255, 255, 255, 0.6),
+              inset -4px -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+  
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Pesos Converter</h1>
+    <label for="number1">Pesos Currency:</label>
+    <input type="number" id="number1">
+
+    <button onclick="Add0p()">Dollar</button>
+    <button onclick="Subtract0p1()">Yen</button>
+    <button onclick="Multiply0p2()">Baht</button>
+    <button onclick="Divide0p3()">Pound</button>
+      <button onclick="Divide0p4()">Euro</button>
+
+  
+      <div id="result"></div>
+
+  </div>
+
+  <script>
+  function Add0p(){
+    const num1= parseFloat(document.getElementById('number1').value);
+    const num2 = 0.017;
+    const ResultSum = num1 * num2;
+    document.getElementById("result").textContent = `The Dollar value is: ${ResultSum}`;
+  }
+
+  function Subtract0p1(){
+    const num1= parseFloat(document.getElementById('number1').value);
+    const num2 = 2.65;
+    const ResultSum = num1 * num2;
+    document.getElementById("result").textContent = `The Yen value is: ${ResultSum}`;
+  }
+ 
+  function Multiply0p2(){
+    const num1= parseFloat(document.getElementById('number1').value);
+    const num2 = 0.58;
+    const ResultProduct = num1 * num2;
+    document.getElementById("result").textContent = `The Baht value is: ${ResultProduct}`;
+  }
+ 
+  function Divide0p3(){
+    const num1= parseFloat(document.getElementById('number1').value);
+    const num2 = 0.014;
+    const ResultQuotient = num1 * num2;
+    document.getElementById("result").textContent = `The Pound value is: ${ResultQuotient}`;
+  }
+    function Divide0p4(){
+    const num1= parseFloat(document.getElementById('number1').value);
+    const num2 = 0.016;
+    const ResultQuotient = num1 * num2;
+    document.getElementById("result").textContent = `The Euro value is: ${ResultQuotient}`;
+}
+  </script>
+</body>
+</html>
